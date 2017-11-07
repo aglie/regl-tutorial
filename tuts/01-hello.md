@@ -22,7 +22,7 @@ Shaders receive information from 3 different types of variables:
 
 Vertex shaders receive inputs from attributes and output varying data to fragment shaders.  Fragment shaders take in the interpolated varying variables and output pixel colors.
 
-<script>
+```javascript
 var regl = require('regl')()
 var text = require('./tuts/text.js')(regl)
 
@@ -237,7 +237,7 @@ regl.frame(({viewportWidth, viewportHeight, tick}) => {
   text('fragment shader', [0.2, -0.2 * aspect], 0.05, [0, 0, 0, 1])
   text('pixels', [0.75, -0.9], 0.05, [0, 0, 0, 1])
 })
-</script>
+```
 
 # getting set up
 
@@ -378,7 +378,7 @@ budo main.js --open --live -- -t es2020
 
 Now that you have regl set up, let's jump in and create a simple application.  For this first example, we're going to make a program that just clears the screen to a solid color.  Copy and paste the following code into an example file and try running it:
 
-<script show>
+```javascript
 // First we import regl and call the constructor
 var regl = require('regl')()
 
@@ -397,12 +397,12 @@ regl.frame(function () {
     // Try changing these numbers in your program and see what happens!
   })
 })
-</script>
+```
 
 ## animation
 `regl.frame` is a [callback](https://en.wikipedia.org/wiki/Callback_%28computer_programming%29#JavaScript) method that takes a function which is executed each frame
 
-<script show>
+```javascript
 var regl = require('regl')()
 
 regl.frame(function () {
@@ -411,4 +411,4 @@ regl.frame(function () {
     color: [0, 0.5 * (1.0 + Math.cos(Date.now() * 0.01)), 1, 1]
   })
 })
-</script>
+```
