@@ -1,7 +1,7 @@
 # your first triangle
 WebGL just draws shaded triangles.  From this, we can create extremely detailed and efficient renderings.  For example, the animation below is drawn in WebGL using just one triangle with a complex fragment shader:
 
-<script>
+```javascript
 var regl = require('regl')()
 
 regl.container.style.width = '100%'
@@ -64,7 +64,7 @@ var drawScene = regl({
 regl.frame(() => {
   drawScene()
 })
-</script>
+```
 
 Many more examples like the above can be found on [shadertoy](https://www.shadertoy.com/), which is a great place to learn more about GLSL programming and computer graphics.
 
@@ -75,7 +75,7 @@ In `regl`, you write commands to tell the GPU how to render objects.  Each comma
 
 Here is an example of a draw command in regl:
 
-<script show>
+```javascript
 // Again, we start out by requiring regl
 var regl = require('regl')()
 
@@ -131,13 +131,13 @@ regl.frame(function () {
   // Then we call the command that we just defined
   drawTriangle()
 })
-</script>
+```
 
 ## glsl 101
 
 ## varying variables
 
-<script show>
+```javascript
 var regl = require('regl')()
 
 var drawTriangle = regl({
@@ -178,12 +178,12 @@ regl.frame(function () {
 
   drawTriangle()
 })
-</script>
+```
 
 
 ## vertex attributes
 
-<script show>
+```javascript
 var regl = require('regl')()
 
 var drawTriangle = regl({
@@ -288,6 +288,6 @@ regl.frame(function () {
 
   drawTriangle()
 })
-</script>
+```
 
 ## advanced glsl
